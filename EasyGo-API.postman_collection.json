@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "28b4f810-f0f9-457b-82ff-86843e2acbc8",
+		"name": "EasyGo API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Class Category",
+			"item": [
+				{
+					"name": "Create Class Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Clasa III\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/classcategory/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"classcategory",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Class Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/classcategory/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"classcategory",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stations",
+			"item": [
+				{
+					"name": "Get All Stations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/stations",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"stations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add One Station",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"GAL\",\n    \"name\": \"GALATI\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/stations/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"stations",
+								"add"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Trips",
+			"item": [
+				{
+					"name": "Get All Trips",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/trips",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trips"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\n    {\n        \"code\": \"TIM-GAL\",\n        \"departureStation\":    {\n        \"id\": \"628f8a2592823f186119fe11\",\n        \"code\": \"TIM\",\n        \"name\": \"TIMISOARA\"\n    },\n        \"arrivalStation\":             {\n                \"id\": \"628f8a3d92823f186119fe13\",\n                \"code\": \"GAL\",\n                \"name\": \"GALATI\"\n            },\n        \"pricePerClassList\": null,\n        \"tripDuration\": null,\n        \"distance\": null,\n        \"tripStatus\": null,\n        \"arrivalDate\": \"2022-05-28T17:30:00\",\n        \"departureDate\": \"2022-05-28T14:30:00\",\n        \"departureTime\": \"2022-05-28T14:30:00\",\n        \"arrivalTime\": \"2022-05-28T17:30:00\",\n        \"legSet\": [\n    {\n         \"id\": \"628f98e9d524851d269ed7aa\",\n        \"code\": \"LEG-TIM-SIB-1\",\n                \"tripCode\": \"TIM-GAL\",\n        \"departureStation\": {\n        \"id\": \"628f8a2592823f186119fe11\",\n        \"code\": \"TIM\",\n        \"name\": \"TIMISOARA\"\n        },\n        \"arrivalStation\": {\n        \"id\": \"628f8a1792823f186119fe10\",\n        \"code\": \"SIB\",\n        \"name\": \"SIBIU\"\n        },\n        \"departureDate\": \"2022-05-28T14:30:00\",\n        \"departureTime\": \"2022-05-28T14:30:00\",\n        \"arrivalDate\": \"2022-05-28T15:30:00\",\n        \"arrivalTime\": \"2022-05-28T15:30:00\"\n    },\n    {\n        \"code\": \"LEG-SIB-ORA-1\",\n        \"id\": \"628f98e9d524851d269ed7ab\",\n                \"tripCode\": \"TIM-GAL\",\n        \"departureStation\": {\n        \"id\": \"628f8a1792823f186119fe10\",\n        \"code\": \"SIB\",\n        \"name\": \"SIBIU\"\n        },\n        \"arrivalStation\": {\n        \"id\": \"628f8a2d92823f186119fe12\",\n        \"code\": \"ORA\",\n        \"name\": \"ORADEA\"\n        },\n        \"departureDate\": \"2022-05-28T15:30:00\",\n        \"departureTime\": \"2022-05-28T15:30:00\",\n        \"arrivalDate\": \"2022-05-28T16:30:00\",\n        \"arrivalTime\": \"2022-05-28T16:30:00\"\n    },\n    {\n        \"code\": \"LEG-ORA-GAL-1\",\n        \"id\": \"628f98e9d524851d269ed7ac\",\n        \"tripCode\": \"TIM-GAL\",\n        \"departureStation\": {\n        \"id\": \"628f8a2d92823f186119fe12\",\n        \"code\": \"ORA\",\n        \"name\": \"ORADEA\"\n        },\n        \"arrivalStation\": {\n        \"id\": \"628f8a3d92823f186119fe13\",\n        \"code\": \"GAL\",\n        \"name\": \"GALATI\"\n        },\n        \"departureDate\": \"2022-05-28T16:30:00\",\n        \"departureTime\": \"2022-05-28T16:30:00\",\n        \"arrivalDate\": \"2022-05-28T17:30:00\",\n        \"arrivalTime\": \"2022-05-28T17:30:00\"\n    }\n],\n        \"destinations\": [\n            {\n                \"id\": \"628f8a2d92823f186119fe12\",\n                \"code\": \"ORA\",\n                \"name\": \"ORADEA\"\n            },\n            {\n                \"id\": \"628f8a3d92823f186119fe13\",\n                \"code\": \"GAL\",\n                \"name\": \"GALATI\"\n            },\n                {\n        \"id\": \"628f8a1792823f186119fe10\",\n        \"code\": \"SIB\",\n        \"name\": \"SIBIU\"\n    },\n    {\n        \"id\": \"628f8a2592823f186119fe11\",\n        \"code\": \"TIM\",\n        \"name\": \"TIMISOARA\"\n    }\n        ]\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/trips/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trips",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Trip Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"code\": \"BUH-CLJ\",\n    \"tripStatus\": \"Scheduled\",\n    \"departureStation\": {\n        \"id\": \"6285ed59f522341aa5731de9\",\n        \"code\": \"BUH-NORD\",\n        \"name\": \"BUCURESTI GARA DE NORD\"\n    },\n    \"arrivalStation\": {\n    \"id\": \"6285ef3ff522341aa5731df5\",\n    \"code\": \"CLUJ-VEST\",\n    \"name\": \"CLUJ VEST\"\n    }  ,\n    \"pricePerClassList\": [\n    {\n        \"id\": \"6286264c4946651a7408424a\",\n        \"code\": \"CFR-CLASA-I-REGIONAL\",\n        \"classCategory\": {\n            \"id\": \"628620720121c260bf5f2d76\",\n            \"name\": \"Clasa I\"\n        },\n        \"price\": 15.0\n    },\n    {\n        \"id\": \"628626584946651a7408424b\",\n        \"code\": \"CFR-CLASA-II-REGIONAL\",\n        \"classCategory\": {\n            \"id\": \"628620770121c260bf5f2d77\",\n            \"name\": \"Clasa II\"\n        },\n        \"price\": 10.0\n    }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/trips/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trips",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Custom Trip Query",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/trips/select?depStationId=6285ed59f522341aa5731de9&arrStationId=6285ef3ff522341aa5731df5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trips",
+								"select"
+							],
+							"query": [
+								{
+									"key": "depStationId",
+									"value": "6285ed59f522341aa5731de9"
+								},
+								{
+									"key": "arrStationId",
+									"value": "6285ef3ff522341aa5731df5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Simple Trip Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/trips/simplesearch?depStationId=6285ed59f522341aa5731de9&arrStationId=6285ef3ff522341aa5731df5&depDate=2018-11-08T00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trips",
+								"simplesearch"
+							],
+							"query": [
+								{
+									"key": "depStationId",
+									"value": "6285ed59f522341aa5731de9"
+								},
+								{
+									"key": "arrStationId",
+									"value": "6285ef3ff522341aa5731df5"
+								},
+								{
+									"key": "depDate",
+									"value": "2018-11-08T00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Price Per Class",
+			"item": [
+				{
+					"name": "Create Price Per Class",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\n        \"code\": \"CFR-CLASA-II-REGIONAL\",\n        \"classCategory\":     {\n        \"id\": \"628620770121c260bf5f2d77\",\n        \"name\": \"Clasa II\"\n    },\n        \"price\": 10.0\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/priceperclass/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priceperclass",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Prices Per Class",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/priceperclass/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"priceperclass",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Legs",
+			"item": [
+				{
+					"name": "Add Leg to Trip",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"code\": \"LEG-TIM-SIB-1\",\n        \"departureStation\": {\n        \"id\": \"628f8a2592823f186119fe11\",\n        \"code\": \"TIM\",\n        \"name\": \"TIMISOARA\"\n        },\n        \"arrivalStation\": {\n        \"id\": \"628f8a1792823f186119fe10\",\n        \"code\": \"SIB\",\n        \"name\": \"SIBIU\"\n        },\n        \"DepartureDate\": \"2022-05-28T14:30:00\",\n        \"DepartureTime\": \"2022-05-28T14:30:00\",\n        \"ArrivalDate\": \"2022-05-28T15:30:00\",\n        \"ArrivalTime\": \"2022-05-28T15:30:00\"\n    },\n    {\n        \"code\": \"LEG-SIB-ORA-1\",\n        \"departureStation\": {\n        \"id\": \"628f8a1792823f186119fe10\",\n        \"code\": \"SIB\",\n        \"name\": \"SIBIU\"\n        },\n        \"arrivalStation\": {\n        \"id\": \"628f8a2d92823f186119fe12\",\n        \"code\": \"ORA\",\n        \"name\": \"ORADEA\"\n        },\n        \"DepartureDate\": \"2022-05-28T15:30:00\",\n        \"DepartureTime\": \"2022-05-28T15:30:00\",\n        \"ArrivalDate\": \"2022-05-28T16:30:00\",\n        \"ArrivalTime\": \"2022-05-28T16:30:00\"\n    },\n    {\n        \"code\": \"LEG-ORA-GAL-1\",\n        \"departureStation\": {\n        \"id\": \"628f8a2d92823f186119fe12\",\n        \"code\": \"ORA\",\n        \"name\": \"ORADEA\"\n        },\n        \"arrivalStation\": {\n        \"id\": \"628f8a3d92823f186119fe13\",\n        \"code\": \"GAL\",\n        \"name\": \"GALATI\"\n        },\n        \"DepartureDate\": \"2022-05-28T16:30:00\",\n        \"DepartureTime\": \"2022-05-28T16:30:00\",\n        \"ArrivalDate\": \"2022-05-28T17:30:00\",\n        \"ArrivalTime\": \"2022-05-28T17:30:00\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/trips/addLeg?tripCode=TIM-GAL",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"trips",
+								"addLeg"
+							],
+							"query": [
+								{
+									"key": "tripCode",
+									"value": "TIM-GAL"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Search",
+			"item": [
+				{
+					"name": "Complex Normal Search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/search/?depStationId=6285ed59f522341aa5731de9&arrStationId=628f8a3d92823f186119fe13&depDate=2022-05-28T00:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"search",
+								""
+							],
+							"query": [
+								{
+									"key": "depStationId",
+									"value": "6285ed59f522341aa5731de9"
+								},
+								{
+									"key": "arrStationId",
+									"value": "628f8a3d92823f186119fe13"
+								},
+								{
+									"key": "depDate",
+									"value": "2022-05-28T00:00"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,45 @@
+{
+  "name": "easygo-admin",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mantine/core": "^4.2.8",
+    "@mantine/dates": "^4.2.8",
+    "@mantine/form": "^4.2.8",
+    "@mantine/hooks": "^4.2.8",
+    "@mantine/modals": "^4.2.8",
+    "@mantine/next": "^4.2.8",
+    "@mantine/notifications": "^4.2.8",
+    "@mui/icons-material": "^5.8.3",
+    "@mui/material": "^5.8.3",
+    "@mui/x-data-grid": "^5.12.0",
+    "chart.js": "^3.8.0",
+    "cookie": "^0.5.0",
+    "daisyui": "^2.15.2",
+    "dayjs": "^1.11.3",
+    "moment": "^2.29.4",
+    "next": "12.1.6",
+    "react": "18.1.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-cookie": "^4.1.1",
+    "react-countup": "^6.3.0",
+    "react-dom": "18.1.0",
+    "tabler-icons-react": "^1.48.1",
+    "universal-cookie": "^4.0.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.17.0",
+    "eslint-config-next": "12.1.6",
+    "postcss": "^8.4.14",
+    "tailwindcss": "^3.0.24"
+  }
+}

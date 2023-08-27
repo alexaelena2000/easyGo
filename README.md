@@ -1,1 +1,1 @@
-# easyGo
+# EasyGo Train Booking Web Application

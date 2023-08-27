@@ -26,7 +26,7 @@ The administrator will have the following capabilities:
 - Viewing, modifying, adding, or deleting tourist attractions from the database
 
 
-##Technologies
+## Technologies
 - Backend
   - Spring Framework
   - Java
